@@ -1,64 +1,377 @@
-* {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 200;
+/* Definición de variables de CSS para colores y fuentes */
+:root {
+    --color-fondo: #1c2638;
+    --color-texto: #f3efed;
+    --color-acento: #d3704e;
+    --color-secundario: #18ada1;
+    --color-seccion: #2b3a4d;
+
+    --fuente-principal: 'Fira Sans', sans-serif;
+    --fuente-encabezado: 'Open Sans', sans-serif;
+
+    --ancho-maximo: 1200px;
+    /* Ancho máximo para el contenedor principal */
 }
 
-html {
-    background-color: peru;
+/* Estilos generales */
+* {
+    font-family: var(--fuente-principal);
+    font-weight: 300;
+    color: var(--color-texto);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: var(--ancho-maximo);
+    /* Limitar ancho máximo en pantallas grandes */
+    padding: 0 20px;
+    /* Espacio lateral para pantallas pequeñas */
+    margin: auto;
+}
+
+/* Encabezados */
+h1,
+h2,
+h3,
+h4 {
+    color: var(--color-texto);
+    font-family: var(--fuente-encabezado);
+    font-weight: 600;
 }
 
 h1 {
-    color: white;
+    font-size: 2.5rem;
     text-align: center;
-    font-weight: bold;
+    margin-top: 1rem;
+    color: var(--color-secundario);
 }
 
-#photo {
-    width: 200px;
+h1~p {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+h2.subtitle {
+    color: var(--color-secundario);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+/* Enlaces */
+a {
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+/* Nav fijo */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-fondo);
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     height: auto;
 }
 
-.subtitle {
-    color: rgb(107 114 128);
-    text-transform: uppercase;
+/* Margen superior para el contenido */
+body {
+    margin-top: 100px;
+    /* Ajusta según el alto del nav */
 }
 
+
+nav a:hover {
+    text-decoration: underline;
+    color: var(--color-acento);
+    cursor: pointer;
+}
+
+/* Navegación */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding: 1rem;
+    background-color: var(--color-fondo);
+    max-width: var(--ancho-maximo);
+    flex-wrap: wrap;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Secciones */
 section {
-    /* margen (espacio externo) superior, derecho, abajo e izquierda */
-    margin: 4px 2px 8px 2px; 
+    max-width: var(--ancho-maximo);
+    /* margin: 10px 20px; */
+    margin: 10px auto;
+    padding: 20px;
+    background-color: var(--color-seccion);
+    border: 1px solid var(--color-secundario);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-    /* borde de grosor 0.2 en puntos, estilo sólido y color hexadecimal #cedddd  */
-    border: 1pt solid #cedddd; 
+section#contacto {
+    color: var(--color-texto);
+    padding: 30px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: var(--fuente-principal);
+}
 
-    /* relleno (espacio interno) de 
-    1.5% en la parte superior e inferior y 
-    0.8% a los lados derecho e izquierdo. */
+section#contacto h2 {
+    font-size: 1.8rem;
+    font-family: var(--fuente-encabezado);
+    color: var(--color-secundario);
+    /* text-align: left; */
+    margin-bottom: 1.5rem;
+}
 
-    padding: 1.5% 0.8%; 
+section#contacto form label {
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: var(--color-texto);
+    display: block;
+    margin-top: 10px;
+}
 
-    /* reemplazan el 0.8% inicial en el relleno izquierdo y derecho, 
-    dándoles un valor específico de 1.2% para esos lados. */
+section#contacto input,
+section#contacto select,
+section#contacto textarea {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-texto);
+    color: var(--color-texto);
+    padding: 8px 0;
+    margin-top: 5px;
+    font-size: 1rem;
+}
 
-    padding-left: 1.2%; 
-    padding-right: 1.2%; 
+section#contacto input::placeholder,
+section#contacto textarea::placeholder {
+    color: var(--color-texto);
+    opacity: 0.7;
+}
+
+section#contacto .tel-container {
+    display: flex;
+    gap: 10px;
+}
+
+section#contacto .tel-container div {
+    flex: 1;
+}
+
+section#contacto button {
+    background-color: var(--color-secundario);
+    color: var(--color-fondo);
+    border: none;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    transition: color 0.3s;
+}
+
+section#contacto button:hover {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
 
 
-    /* borde redondeado con un radio de 5 píxeles */
+/* section#contacto .note {
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--color-texto);
+    margin-top: 10px;
+    opacity: 0.8;
+} */
 
-    /* en navegadores basados en WebKit, 
-    como versiones antiguas de Safari y Chrome. */
-    -webkit-border-radius: 5px; 
 
-    /* en navegadores antiguos de Mozilla, 
-    como Firefox.  */
-    -moz-border-radius: 5px;    
+/* Tabla de experiencia */
+table {
+    width: 100%;
+    color: var(--color-texto);
+    border-collapse: collapse;
+    margin-top: 10px;
+}
 
-    /* en navegadores modernos. */
-    border-radius: 5px;   
+th,
+td {
+    padding: 12px;
+    border: 1px solid var(--color-secundario);
+    text-align: center;
+}
 
-    /* sombra a un elemento */
+th {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
 
-    -webkit-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
-    -moz-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
-    box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
+/* Footer */
+footer {
+    max-width: var(--ancho-maximo);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+
+footer div.rights,
+footer div.redes {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+}
+
+footer div.rights {
+    gap: 0px;
+}
+
+footer a {
+    color: var(--color-secundario);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+footer a:hover {
+    color: var(--color-acento);
+}
+
+footer i.fa-brands,
+footer i.fa-solid {
+    font-size: 50px;
+}
+
+/* Sección de resumen en Grid */
+#resumen {
+    display: grid;
+    gap: 0px 10px;
+    grid-template-areas: "A D"
+        "B D";
+}
+
+#resumen h2 {
+    grid-area: A;
+}
+
+#resumen div.aboutme {
+    grid-area: B;
+}
+
+#resumen div.aboutme p {
+    text-align: left;
+}
+
+#resumen img {
+    grid-area: D;
+}
+
+#photo {
+    width: auto;
+    height: 300px;
+    clip-path: inset(0 0 0 0 round 10%);
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+
+    /* Navegación en columna para pantallas pequeñas */
+    nav ul {
+        /* flex-direction: column; */
+        /* row-gap: 5px; */
+    }
+
+    /* Sección resumen en una sola columna */
+    #resumen {
+        grid-template-areas:
+            "A"
+            "B"
+            "D";
+    }
+
+    /* Ajuste de tamaño de fuente en pantallas pequeñas */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2.subtitle {
+        font-size: 1.5rem;
+    }
+
+    /* Márgenes laterales reducidos en secciones */
+    section {
+        margin: 10px 5px;
+    }
+
+    #photo {
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    /* Márgenes laterales adicionales en pantallas grandes */
+    .container {
+        padding: 0 40px;
+    }
+}
+
+section#habilidades div.contenedor-tecnologias,
+section#habilidades div.contenedor-soft {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+section#habilidades div.tecnologia,
+section#habilidades div.soft {
+    width: 100px;
+    height: 120px;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    border: 1px solid var(--color-secundario);
+    gap: 10px;
+}
+
+section#habilidades i.fa-brands,
+section#habilidades i.fa-solid {
+    font-size: 50px;
 }
