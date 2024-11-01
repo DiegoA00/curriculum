@@ -1,237 +1,282 @@
-/* Definición de variables de CSS para colores y fuentes */
 :root {
     --color-fondo: #1c2638;
     --color-texto: #f3efed;
     --color-acento: #d3704e;
-    --color-secundario: #18ada1;
+    --color-secundario: #1bb6b3;
     --color-seccion: #2b3a4d;
 
     --fuente-principal: 'Fira Sans', sans-serif;
     --fuente-encabezado: 'Open Sans', sans-serif;
 
-    --ancho-maximo: 1200px;
-    /* Ancho máximo para el contenedor principal */
+    --ancho-maximo: 900px;
 }
 
-/* Estilos generales */
 * {
-    font-family: var(--fuente-principal);
-    font-weight: 300;
-    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    text-align: center;
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
 }
 
 body {
     background-color: var(--color-fondo);
-    margin: 0;
-    padding: 0;
-}
-
-/* Contenedor principal */
-.container {
-    width: 100%;
-    max-width: var(--ancho-maximo);
-    /* Limitar ancho máximo en pantallas grandes */
-    padding: 0 20px;
-    /* Espacio lateral para pantallas pequeñas */
-    margin: auto;
-}
-
-/* Encabezados */
-h1,
-h2,
-h3,
-h4 {
+    padding: 20px;
     color: var(--color-texto);
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    font-family: var(--fuente-principal);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    margin-top: 64px;
     font-family: var(--fuente-encabezado);
-    font-weight: 600;
+}
+
+nav {
+    margin: auto;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: var(--color-fondo);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    height: 64px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 24px 0;
+    text-transform: uppercase;
+}
+
+nav ul li:hover {
+    border-bottom: var(--color-acento) solid 1px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secundario);
+}
+
+a:hover {
+    color: var(--color-acento);
+}
+
+.avatar {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
 }
 
 h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-top: 1rem;
+    font-size: 2em;
     color: var(--color-secundario);
 }
 
-h1~p {
-    text-align: center;
-    font-size: 1.3rem;
+.subtitle {
+    font-size: 1.2em;
+    color: var(--color-texto);
 }
 
-h2.subtitle {
-    color: var(--color-secundario);
-    text-transform: uppercase;
-    font-size: 1.8rem;
+.location {
+    font-size: 1em;
+    color: var(--color-texto);
 }
 
-/* Enlaces */
-a {
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+}
+
+.contact-info a {
     color: var(--color-secundario);
     text-decoration: none;
 }
 
-/* Nav fijo */
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
+div.separator {
     width: 100%;
-    background-color: var(--color-fondo);
-    z-index: 1000;
-    padding: 1rem 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    height: auto;
+    height: 1px;
+    background-color: var(--color-secundario);
+    margin: 20px 0;
 }
 
-/* Margen superior para el contenido */
-body {
-    margin-top: 100px;
-    /* Ajusta según el alto del nav */
-}
-
-
-nav a:hover {
-    text-decoration: underline;
-    color: var(--color-acento);
-    cursor: pointer;
-}
-
-/* Navegación */
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-    padding: 1rem;
-    background-color: var(--color-fondo);
-    max-width: var(--ancho-maximo);
-    flex-wrap: wrap;
-}
-
-li {
-    list-style-type: none;
-}
-
-/* Secciones */
 section {
-    max-width: var(--ancho-maximo);
-    /* margin: 10px 20px; */
-    margin: 10px auto;
-    padding: 20px;
-    background-color: var(--color-seccion);
-    border: 1px solid var(--color-secundario);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 32px;
+    padding-top: 72px;
+    margin-top: -72px;
 }
 
-section#contacto {
+h2 {
+    font-size: 1.5em;
+    color: var(--color-secundario);
+    margin-bottom: 10px;
+    font-family: var(--fuente-encabezado);
+}
+
+.about p {
     color: var(--color-texto);
-    padding: 30px;
-    margin: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    line-height: 1.6;
     font-family: var(--fuente-principal);
 }
 
-section#contacto h2 {
-    font-size: 1.8rem;
-    font-family: var(--fuente-encabezado);
-    color: var(--color-secundario);
-    /* text-align: left; */
-    margin-bottom: 1.5rem;
-}
-
-section#contacto form label {
-    font-weight: 300;
-    font-size: 0.9rem;
-    color: var(--color-texto);
-    display: block;
-    margin-top: 10px;
-}
-
-section#contacto input,
-section#contacto select,
-section#contacto textarea {
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid var(--color-texto);
-    color: var(--color-texto);
-    padding: 8px 0;
-    margin-top: 5px;
-    font-size: 1rem;
-}
-
-section#contacto input::placeholder,
-section#contacto textarea::placeholder {
-    color: var(--color-texto);
-    opacity: 0.7;
-}
-
-section#contacto .tel-container {
+/* Technologies styling */
+.technologies ul {
+    list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    padding: 0;
+    margin: 10px 0;
 }
 
-section#contacto .tel-container div {
-    flex: 1;
+.technologies li {
+    display: inline-block;
+    margin-right: 10px;
+    font-family: var(--fuente-principal);
+    background-color: var(--color-seccion);
+    color: var(--color-texto);
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    transition: color 0.2s;
 }
 
-section#contacto button {
-    background-color: var(--color-secundario);
-    color: var(--color-fondo);
+.technologies li:hover {
+    background-color: var(--color-fondo);
+    color: var(--color-secundario);
+}
+
+/* Experience and Projects styling */
+.experience .job,
+.projects .project {
+    background-color: var(--color-seccion);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.job h3,
+.project h3 {
+    color: var(--color-secundario);
+    font-size: 1.2em;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Training section styling */
+.training .education {
+    background-color: var(--color-seccion);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+
+.subsection {
+    background-color: var(--color-seccion);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.subsection-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    /* box-sizing: border-box; */
+}
+
+.project-tech ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8px 0;
+}
+
+.project-tech span {
+    background-color: var(--color-fondo);
+    color: var(--color-acento);
+    padding: 2px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.project-demo {
+    max-width: 400px;
+    max-height: 200px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 5px;
     border: none;
-    padding: 10px 0;
-    width: 100%;
-    margin-top: 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    transition: color 0.3s;
 }
 
-section#contacto button:hover {
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
+.links {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 5px;
 }
 
-
-/* section#contacto .note {
-    font-size: 0.8rem;
-    text-align: center;
-    color: var(--color-texto);
-    margin-top: 10px;
-    opacity: 0.8;
-} */
-
-
-/* Tabla de experiencia */
-table {
-    width: 100%;
-    color: var(--color-texto);
-    border-collapse: collapse;
-    margin-top: 10px;
+/* Extra section styling */
+.extra {
+    display: flex;
+    justify-content: space-between;
 }
 
-th,
-td {
-    padding: 12px;
-    border: 1px solid var(--color-secundario);
+.extra-item {
+    width: 30%;
     text-align: center;
 }
 
-th {
-    background-color: var(--color-fondo);
+.extra-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.extra-item p {
     color: var(--color-texto);
+    font-size: 0.9em;
 }
 
 /* Footer */
 footer {
     max-width: var(--ancho-maximo);
-    background-color: var(--color-fondo);
     color: var(--color-texto);
     padding: 10px 0;
     text-align: center;
@@ -245,133 +290,189 @@ footer {
 footer div.rights,
 footer div.redes {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     align-content: center;
-    gap: 20px;
-}
-
-footer div.rights {
     gap: 0px;
 }
 
-footer a {
-    color: var(--color-secundario);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+
+
+a i,
+footer a i {
+    font-size: 1.5em;
 }
 
-footer a:hover {
+a:hover,
+a:hover i,
+footer a:hover i {
     color: var(--color-acento);
 }
 
-footer i.fa-brands,
-footer i.fa-solid {
-    font-size: 50px;
+a:hover {
+    color: var(--color-acento);
 }
 
-/* Sección de resumen en Grid */
-#resumen {
-    display: grid;
-    gap: 0px 10px;
-    grid-template-areas: "A D"
-        "B D";
+.contact .form {
+    background-color: var(--color-seccion);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
 }
 
-#resumen h2 {
-    grid-area: A;
-}
-
-#resumen div.aboutme {
-    grid-area: B;
-}
-
-#resumen div.aboutme p {
-    text-align: left;
-}
-
-#resumen img {
-    grid-area: D;
-}
-
-#photo {
-    width: auto;
-    height: 300px;
-    clip-path: inset(0 0 0 0 round 10%);
-}
-
-/* Diseño Responsivo */
-@media (max-width: 768px) {
-
-    /* Navegación en columna para pantallas pequeñas */
-    nav ul {
-        /* flex-direction: column; */
-        /* row-gap: 5px; */
-    }
-
-    /* Sección resumen en una sola columna */
-    #resumen {
-        grid-template-areas:
-            "A"
-            "B"
-            "D";
-    }
-
-    /* Ajuste de tamaño de fuente en pantallas pequeñas */
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2.subtitle {
-        font-size: 1.5rem;
-    }
-
-    /* Márgenes laterales reducidos en secciones */
-    section {
-        margin: 10px 5px;
-    }
-
-    #photo {
-        width: 50%;
-        height: auto;
-    }
-}
-
-@media (min-width: 1200px) {
-
-    /* Márgenes laterales adicionales en pantallas grandes */
-    .container {
-        padding: 0 40px;
-    }
-}
-
-section#habilidades div.contenedor-tecnologias,
-section#habilidades div.contenedor-soft {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-section#habilidades div.tecnologia,
-section#habilidades div.soft {
-    width: 100px;
-    height: 120px;
-    color: var(--color-texto);
-    background-color: var(--color-fondo);
-    margin: 10px;
+.form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-    border: 1px solid var(--color-secundario);
-    gap: 10px;
+    gap: 8px;
+    font-family: var(--fuente-principal);
 }
 
-section#habilidades i.fa-brands,
-section#habilidades i.fa-solid {
-    font-size: 50px;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: 16px;
+    font-family: var(--fuente-principal);
+}
+
+form label {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
+    margin-bottom: 4px;
+}
+
+form input,
+form textarea {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid var(--color-secundario);
+    font-family: var(--fuente-principal);
+    border-radius: 4px;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+
+}
+
+section#contact input::placeholder,
+section#contact textarea::placeholder {
+    color: var(--color-texto);
+    opacity: 0.5;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--color-acento);
+    outline: none;
+    box-shadow: 0 0 5px rgba(211, 112, 78, 0.5);
+}
+
+section#contact button {
+    background-color: var(--color-secundario);
+    color: var(--color-fondo);
+    border: none;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--fuente-principal);
+    font-size: 1em;
+    transition: background-color 0.3s;
+    transition: color 0.3s;
+}
+
+section#contact button:hover {
+    background-color: var(--color-fondo);
+    color: var(--color-acento);
+}
+
+
+@media (max-width: 600px) {
+    nav {
+        height: 96px;
+    }
+
+
+    nav ul {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 24px;
+        margin-top: 96px;
+    }
+
+    header .avatar {
+        width: 200px;
+        height: 200px;
+    }
+
+    header .info {
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    section {
+        padding-top: 112px;
+        margin-top: -112px;
+        text-align: center;
+    }
+
+    .subsection {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .technologies ul {
+        justify-content: center;
+    }
+
+    .project-demo {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    section form {
+        text-align: left;
+    }
+
+    div.subsection-information {
+        align-items: center;
+    }
+
+    .project-tech span{
+        margin: 0;
+    }
+
+    .project-tech {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 364px) {
+    nav {
+        height: 136px;
+    }
+
+    header {
+        margin-top: 136px;
+    }
+
+    section {
+        padding-top: 148px;
+        margin-top: -148px;
+    }
 }
