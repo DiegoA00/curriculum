@@ -10,141 +10,163 @@
         content="Curriculum de Diego Araujo, estudiante de Ingeniería en Ciencias de la Computación en ESPOL.">
     <meta name="author" content="Diego Araujo">
     <title>Diego Araujo CV</title>
+    <link rel="icon" href="images/logo/favicon.ico">
+
     <link rel="stylesheet" href="stylesheets/style.css">
-    <link rel="icon" href="src/images/logo/favicon.ico">
+
+
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <script src="https://kit.fontawesome.com/c44e7985a5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <h1>Diego Araujo</h1>
-        <p>Estudiante de Ingeniería en Ciencias de la Computación | dienarau@espol.edu.ec</p>
+        <img src="images/avatar.JPG" alt="Avatar de Diego Araujo" class="avatar">
+        <div class="info">
+            <h1>Diego Araujo</h1>
+            <p class="subtitle">Estudiante de Ingeniería en Ciencias de la Computación</p>
+            <p class="location">ESPOL</p>
+            <div class="contact-info">
+                <a href="mailto:dienarau@espol.edu.ec"><i class="fa-solid fa-envelope"></i> dienarau@espol.edu.ec</a>
+                <a href="pdf/CV-DiegoAraujoOrtega.pdf" target="_blank"><i class="fa-solid fa-file-lines"></i></a>
+                <a href="https://github.com/DiegoA00" target="_blank"><i class="devicon-github-original"></i></a>
+                <a href="https://linkedin.com/in/diego-araujo-ortega" target="_blank"><i class="devicon-linkedin-plain"></i></a>
+            </div>
+        </div>
     </header>
+
     <nav>
         <ul>
-            <li><a href="#resumen">Acerca de mi</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#educacion">Educación</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <!-- <li><a href="#experiencia">Experiencia</a></li> -->
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#about">Sobre mi</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <!-- <li><a href="experience">Experiencia</a></li> -->
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#training">Formación</a></li>
+            <li><a href="#contact">Contacto</a></li>
         </ul>
     </nav>
-    <main>
-        <section id="resumen">
-            <h2 class="subtitle">Acerca de mi</h2>
-            <div class="aboutme">
-                <p>Soy estudiante de Ingeniería en Ciencias de la Computación en la ESPOL, apasionado por las nuevas herramientas y tecnologías. Actualmente, me encuentro profundizando en tecnologías que forman la base de la creación de aplicaciones y sistemas modernos, lo que me permite adquirir una perspectiva integral en el desarrollo de soluciones digitales.</p>
-                <p>Mi meta es no solo convertirme en un desarrollador competente, sino también en un profesional capaz de abordar problemas complejos con creatividad y eficiencia, contribuyendo al desarrollo de soluciones innovadoras y seguras.</p>
-                <p>Interéses actual: La ciberseguridad y La inteligencia artificial.</p>
-            </div>
-            <img id="photo" src="src/images/me2024.jpeg" alt="Picture me">
-        </section>
-        <!-- <section id="experiencia">
-            <h2 class="subtitle">Experiencia</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Empresa</th>
-                        <th>Puesto</th>
-                        <th>Años de experiencia</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>No</td>
-                        <td>tengo</td>
-                        <td>pipipi</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section> -->
-        <section id="habilidades">
-            <h2 class="subtitle">Habilidades</h2>
-            <h3>Habilidades técnicas</h3>
-            <div class="contenedor-tecnologias">
-                <div class="tecnologia">
-                    <i class="fa-brands fa-python"></i>
-                    <span>Python</span>
+
+    <section id="about" class="about">
+        <h2>Sobre mí</h2>
+        <p>Soy estudiante de Ingeniería en Ciencias de la Computación en la ESPOL, apasionado por las nuevas
+            herramientas y tecnologías. Actualmente, me encuentro profundizando en tecnologías que forman la
+            base de la creación de aplicaciones y sistemas modernos, lo que me permite adquirir una perspectiva
+            integral en el desarrollo de soluciones digitales.</p>
+    </section>
+
+    <div class="separator" role="separator"></div>
+
+    <section id="skills" class="technologies">
+        <h2>Tecnologías</h2>
+        <ul>
+            <li><i class="devicon-python-plain"></i> Python</li>
+            <li><i class="devicon-html5-plain"></i> HTML5</li>
+            <li><i class="devicon-css3-plain"></i> CSS3</li>
+            <li><i class="devicon-javascript-plain"></i> JavaScript</li>
+            <li><i class="devicon-git-plain"></i> Git</li>
+            <li><i class="devicon-mysql-original"></i> MySQL</li>
+        </ul>
+        <h2>Habilidades blandas</h2>
+        <ul>
+            <li><i class="fa-solid fa-people-group"></i> Trabajo en equipo</li>
+            <li><i class="fa-solid fa-user-gear"> </i> Resolución de problemas</li>
+            <li><i class="fa-solid fa-comments"></i> Comunicación</li>
+        </ul>
+    </section>
+
+    <!-- <section id="experience" class="experience">
+        <h2>Experiencia</h2>
+        <div class="job">
+            <h3>Cliente</h3>
+            <p>Puesto</p>
+            <p>Futuro - Futuro</p>
+            <p>Actividades</p>
+        </div>
+    </section> -->
+
+    <section id="projects" class="projects">
+        <h2>Proyectos finalizados</h2>
+        <div class="subsection">
+            <div class="subsection-information">
+                <h3>Tic tac toe</h3>
+                <p>Proyecto de Estructras de Datos</p>
+                <p>Juego de tres en raya usando Java y Scenebuilder.</p>
+                <div class="project-tech">
+                    <span><i class="devicon-java-plain"></i> Java</span>
+                    <span>Scenebuilder</span>
                 </div>
-                <div class="tecnologia">
-                    <i class="fa-brands fa-java"></i>
-                    <span>Java</span>
-                </div>
-                <div class="tecnologia">
-                    <i class="fa-brands fa-html5"></i>
-                    <span>HTML5</span>
-                </div>
-                <div class="tecnologia">
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <span>CSS</span>
-                </div>
-                <div class="tecnologia">
-                    <i class="fa-brands fa-js"></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="tecnologia">
-                    <i class="fa-brands fa-git-alt"></i>
-                    <span>Git</span>
-                </div>
-                <div class="tecnologia">
-                    <i class="fa-solid fa-database"></i>
-                    <span>MySQL</span>
+                <div class="links">
+                    <a href="https://github.com/vicbguti-espol/SmartTicTacToe" target="_blank"><i class="devicon-github-original"></i></a>
+                    <!-- <a href="https://github.com/DiegoA00" target="_blank"><i class="fa-solid fa-link"></i></a> -->
                 </div>
             </div>
-            <h3>Habilidades blandas</h3>
-            <div class="contenedor-soft">
-                <div class="soft">
-                    <i class="fa-solid fa-people-group"></i>
-                    <span>Trabajo en equipo</span>
-                </div>
-                <div class="soft">
-                    <i class="fa-solid fa-sitemap"></i>
-                    <span>Organización</span>
-                </div>
-                <div class="soft">
-                    <i class="fa-solid fa-comments"></i>
-                    <span>Comunicación</span>
-                </div>
-                <div class="soft">
-                    <i class="fa-solid fa-user-gear"></i>
-                    <span>Resolución de problemas</span>
-                </div>
-            </div>
-        </section>
-        <section id="educacion">
-            <h2 class="subtitle">Educación</h2>
-            <h3>Ingeniería en Ciencias de la Computación</h3>
-            <ul>
-                <li>Escuela Superior Politécnica del Litoral - ESPOL</li>
-                <li>2022-2027</li>
-            </ul>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2333.58711260094!2d-79.96795370175687!3d-2.1435245453346585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d7303bb0133cd%3A0x66c18bd9810f31cb!2sFacultad%20de%20Ingenier%C3%ADa%20en%20Electricidad%20y%20Computaci%C3%B3n%20FIEC%20-%20ESPOL!5e0!3m2!1ses-419!2sec!4v1730216520534!5m2!1ses-419!2sec"
-                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-        <section id="proyectos">
-            <h2 class="subtitle">Proyectos</h2>
-            <h3>Proyectos finalizados</h3>
-            <h4>Tres en raya</h4>
-            <p>Juego de tres en raya usando Java y SceneBuilder</p>
-            <video width="320" height="240" controls>
-                <source src="path/to/your/video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/whmUAAMwrxY?si=rsUtOJor0Ja2Bg8_"
-                title="YouTube video player" frameborder="0"
+            <!-- <img src="images/project1.jpg" alt="Proyecto 1"> -->
+            <iframe class="project-demo"
+                src="https://www.youtube-nocookie.com/embed/Pbkv6WSTvE8?si=ksohLL_94fbthXR7&amp;controls=0&amp;start=10&amp;end=68&amp;mute=1&amp;showinfo=0"
+                title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <h3>Proyectos en progreso</h3>
-            <h4>Repositorio del desarrollador</h4>
-            <p>Información acerca de mi perfil desarrollador usando Markdown y GitHub Pages</p>
-            <h4>Curriculum Vitae</h4>
-            <p>Mi Curriculum Vitae usando HTML & CSS</p>
-        </section>
-        <section id="contacto">
-            <h2 class="subtitle">Contáctame</h2>
+        </div>
+        <div class="subsection">
+            <div class="subsection-information">
+                <h3>Battleship</h3>
+                <p>Proyecto de Organización de Computadoras</p>
+                <p>Juego de battleship usando Assembly y un emulador del 8086.</p>
+                <div class="project-tech">
+                    <span>Assembly</span>
+                </div>
+                <div class="links">
+                    <a href="https://github.com/DiegoA00/Battleship-Assembly" target="_blank"><i class="devicon-github-original"></i></a>
+                    <!-- <a href="https://github.com/DiegoA00" target="_blank"><i class="fa-solid fa-link"></i></a> -->
+                </div>
+            </div>
+            <!-- <img src="images/project2.jpg" alt="Proyecto 2"> -->
+            <iframe class="project-demo"
+                src="https://www.youtube-nocookie.com/embed/SywFsSVCEBI?si=7zKeKtJY7LC0h3FN&amp;controls=0&amp;controls=0"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <h2>Proyectos en progreso</h2>
+        <div class="subsection">
+            <div class="subsection-information">
+                <h3>Landing page</h3>
+                <p>Proyecto de Desarrollo de Aplicaciones Web y Móvil</p>
+                <p>Landing page para una tienda de motos.</p>
+                <div class="project-tech">
+                    <span><i class="devicon-html5-plain"></i> HTML5</span>
+                    <span><i class="devicon-css3-plain"></i> CSS</span>
+                    <span><i class="devicon-javascript-plain"></i> JavaScript</span>
+                </div>
+                <div class="links">
+                    <a href="https://github.com/DiegoA00/landing" target="_blank"><i class="devicon-github-original"></i></a>
+                    <!-- <a href="https://github.com/DiegoA00" target="_blank">Link</a> -->
+                </div>
+            </div>
+            <img class="project-demo" src="https://placehold.co/400x200/1c2638/18ada1?text=Pr%C3%B3ximamente"
+                alt="Proyecto p1">
+        </div>
+    </section>
+
+    <section id="training" class="training">
+        <h2>Formación</h2>
+        <div class="subsection">
+            <div class="subsection-information">
+                <h3>Ingeniería en Ciencias de la Computación</h3>
+                <p>Escuela Superior Politécnica del Litoral - ESPOL</p>
+                <p>2022 - presente</p>
+            </div>
+            <iframe class="project-demo"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2333.58711260094!2d-79.96795370175687!3d-2.1435245453346585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d7303bb0133cd%3A0x66c18bd9810f31cb!2sFacultad%20de%20Ingenier%C3%ADa%20en%20Electricidad%20y%20Computaci%C3%B3n%20FIEC%20-%20ESPOL!5e0!3m2!1ses-419!2sec!4v1730216520534!5m2!1ses-419!2sec"
+                width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contáctame</h2>
+        <div class="form">
+            <p>Si deseas ponerte en contacto conmigo, puedes hacerlo a través del siguiente formulario:</p>
             <form>
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ejem: Diego Araujo" required>
@@ -159,16 +181,19 @@
                     required></textarea>
                 <button type="submit">Enviar</button>
             </form>
-        </section>
-    </main>
+        </div>
+    </section>
+    
     <footer>
         <div class="rights">
-            <img src="src/images/logo/android-chrome-192x192.png" alt="Logo icon">
             <p>© 2024 Diego Araujo. Todos los derechos reservados</p>
         </div>
-        <div class="redes">
-            <a href="https://www.linkedin.com/in/diego-araujo-ortega" target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/DiegoA00" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+        <div class="contact-info">
+            <a href="mailto:dienarau@espol.edu.ec"><i class="fa-solid fa-envelope"></i></a>
+            <a href="pdf/CV-DiegoAraujoOrtega.pdf" target="_blank"><i class="fa-solid fa-file-lines"></i></a>
+            <a href="https://github.com/DiegoA00" target="_blank"><i class="devicon-github-original"></i></a>
+            <a href="https://linkedin.com/in/diego-araujo-ortega" target="_blank"><i
+                    class="devicon-linkedin-plain"></i></a>
         </div>
     </footer>
 </body>
